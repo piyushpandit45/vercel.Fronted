@@ -175,58 +175,56 @@ const Internship = () => {
           </div>
           
           <div className="course-detail-content">
-            <div className="course-detail-grid">
-              <div className="course-detail-image">
-                <img src={courseDetails[selectedCourse.id].image} alt={courseDetails[selectedCourse.id].title} />
-              </div>
+            <div className="course-detail-image">
+              <img src={courseDetails[selectedCourse.id].image} alt={courseDetails[selectedCourse.id].title} />
+            </div>
+            
+            <div className="course-detail-info">
+              <h2>{courseDetails[selectedCourse.id].title}</h2>
               
-              <div className="course-detail-info">
-                <h2>{courseDetails[selectedCourse.id].title}</h2>
-                
-                <div className="course-overview">
-                  <h3>Course Overview</h3>
-                  <p>{courseDetails[selectedCourse.id].overview}</p>
-                </div>
+              <div className="course-overview">
+                <h3>Course Overview</h3>
+                <p>{courseDetails[selectedCourse.id].overview}</p>
+              </div>
 
-                <div className="course-learn">
-                  <h3>What You Will Learn</h3>
-                  <ul>
-                    {courseDetails[selectedCourse.id].whatYouLearn.map((item, index) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
+              <div className="course-learn">
+                <h3>What You Will Learn</h3>
+                <ul>
+                  {courseDetails[selectedCourse.id].whatYouLearn.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </div>
 
-                <div className="course-meta">
-                  <div className="course-duration">
-                    <h4>Course Duration</h4>
-                    <p>{courseDetails[selectedCourse.id].duration}</p>
-                  </div>
-                  <div className="course-mode">
-                    <h4>Mode</h4>
-                    <p>{courseDetails[selectedCourse.id].mode}</p>
-                  </div>
+              <div className="course-meta">
+                <div className="course-duration">
+                  <h4>Course Duration</h4>
+                  <p>{courseDetails[selectedCourse.id].duration}</p>
                 </div>
-
-                <div className="course-benefits">
-                  <h3>Course Benefits</h3>
-                  <div className="benefits-grid">
-                    {courseDetails[selectedCourse.id].benefits.map((benefit, index) => (
-                      <div key={index} className="benefit-item">
-                        <span className="benefit-check">✔</span>
-                        <span>{benefit}</span>
-                      </div>
-                    ))}
-                  </div>
+                <div className="course-mode">
+                  <h4>Mode</h4>
+                  <p>{courseDetails[selectedCourse.id].mode}</p>
                 </div>
+              </div>
 
-                <div className="course-actions">
-                  <div className="action-buttons">
-                    <button className="whatsapp-btn" onClick={handleWhatsApp}>
-                      <span>💬</span>
-                      Chat on WhatsApp
-                    </button>
-                  </div>
+              <div className="course-benefits">
+                <h3>Course Benefits</h3>
+                <div className="benefits-grid">
+                  {courseDetails[selectedCourse.id].benefits.map((benefit, index) => (
+                    <div key={index} className="benefit-item">
+                      <span className="benefit-check">✔</span>
+                      <span>{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="course-actions">
+                <div className="action-buttons">
+                  <button className="whatsapp-btn" onClick={handleWhatsApp}>
+                    <span>💬</span>
+                    Chat on WhatsApp
+                  </button>
                 </div>
               </div>
             </div>
