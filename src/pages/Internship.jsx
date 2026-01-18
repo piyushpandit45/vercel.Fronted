@@ -170,7 +170,7 @@ const Internship = () => {
         <div className="course-detail">
           <div className="course-detail-header">
             <button onClick={handleBack} className="back-link">
-              ← Back to Courses
+              ← Back
             </button>
           </div>
           
